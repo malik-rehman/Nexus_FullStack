@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,useLocation } from "react-router-dom";
 import Login from "./Pages/Login";
 
 import EntrepreneurDashboard from "./Pages/Dashboard/EntrepreneurDashboard";
@@ -12,11 +12,14 @@ import DocumentsPage from "./Pages/Document/DocumentsPage";
 import SettingPage from "./Pages/Entrepreneurs/SettingPage";
 
 function App() {
+
+  const location=useLocation();
+
   return (
     <>
       <div>
-        <Navbar/>
-      
+        {location.pathname !=="/" &&  <Navbar/>}
+     
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/Dashboard" element={<EntrepreneurDashboard />} />
@@ -27,6 +30,7 @@ function App() {
           <Route path="/settings" element={<SettingPage/>} />
 
         </Routes>
+        
       </div>
     </>
   );
