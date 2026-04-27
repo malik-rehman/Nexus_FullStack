@@ -10,6 +10,7 @@ import InvestorPage from "./Pages/Entrepreneurs/InvestorPage";
 import Notifications from "./Pages/Notification/Notifications";
 import DocumentsPage from "./Pages/Document/DocumentsPage";
 import SettingPage from "./Pages/Entrepreneurs/SettingPage";
+import MessagePage from "./Pages/Entrepreneurs/MessagePage";
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
           <Route path="/Notification" element={<Notifications/>} />
           <Route path="/Document" element={<DocumentsPage/>} />
           <Route path="/settings" element={<SettingPage/>} />
+          <Route path="/Message" element={<MessagePage/>} />
+
 
         </Routes>
         

@@ -6,7 +6,7 @@ const menuItems = [
   { id: "dashboard", label: "Dashboard", icon: HomeIcon, href: "/Dashboard" },
   { id: "startup", label: "My Startup", icon: StartupIcon, href: "/Profile" },
   { id: "investors", label: "Find Investors", icon: DollarIcon, href: "/Investors" },
-  { id: "messages", label: "Messages", icon: MessageIcon, href: "/messages" },
+  { id: "messages", label: "Messages", icon: MessageIcon, href: "/Message" },
   { id: "notifications", label: "Notifications", icon: BellIcon, href: "/Notification" },
   { id: "documents", label: "Documents", icon: DocIcon, href: "/Document" },
 ];

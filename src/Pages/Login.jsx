@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import {
   BriefcaseBusiness,
   Building2,
@@ -10,6 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const ref=useRef()
   const [role, setRole] = useState("entrepreneur");
   const [remember, setRemember] = useState(false);
   const [Email, setEmail] = useState("")
@@ -53,7 +54,7 @@ export default function Login() {
             </button>
 
             <button
-              onClick={() => setRole("investor")}
+             onClick={() => setRole("investor")}
               className={`h-12 sm:h-14 px-3 rounded-xl border text-sm sm:text-base font-medium flex items-center justify-center gap-2 transition ${
                 role === "investor"
                   ? "border-blue-600 text-blue-600 bg-blue-50"
@@ -133,13 +134,13 @@ export default function Login() {
           {/* Demo buttons */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button onClick={()=>{setEmail("Entrepreneur@gmail.com");
-              setPassword("enterpreneur")
+              setPassword("enterpreneur");setRole("entrepreneur");
             }} className="cursor-pointer h-12 sm:h-14 rounded-xl border border-slate-300 text-slate-700 text-sm sm:text-base font-medium flex items-center justify-center gap-2 hover:bg-slate-50">
               <Building2 size={18} />
               Entrepreneur Demo
             </button>
             <button onClick={()=>{setEmail("Investor@gmail.com");
-              setPassword("investor")
+              setPassword("investor");setRole("investor");
             }} className="h-12 sm:h-14 rounded-xl border border-slate-300 text-slate-700 text-sm sm:text-base font-medium flex items-center justify-center gap-2 hover:bg-slate-50">
               <CircleDollarSign size={18} />
               
